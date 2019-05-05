@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+* {
+	box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.monthname {
+  width: 18em;
+}
+.pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
+body {
+  background-color: #F6F2F2;
+  font-family: 'Lato',sans-serif;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+  padding: .5em 2em;
+  margin-bottom: .5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-content: center;
+}
+
+.calendar p {
+  line-height: 1.5em;
+	margin: 0;
+	color: #444;
+}
+
+.calendar, .events-block , #search, #searchResult{
+	background: #fff;
+	color: #777;
+	padding: 0;
+  max-width: 24em;
+  width: 100%;
+	min-height: 15em;
+	margin: .5em auto;
+}
+#search {
+  max-width: 35em;
+  width: 35em;
+  height: 2em;
+  min-height: auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.calendar li {
+	float: left;
+	width: calc(100% / 7);
+	text-align: center;
+	padding: .35em 0;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.calendar li.empty {
+  pointer-events: none;
+}
+
+.calendar li:hover {
+	color: red;
+}
+
+.calendar li.active,
+.calendar li.active:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.calendar .dayName li {
+	color: #777;
+}
+.center {
+	text-align: center;
+}
+
+.active-date {
+  background: rgba(255, 0, 0, 0.15);
+}
+
+.add-new-event {
+  margin: 10px 0;
+}
+.new-event__block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.new-event__block input, .new-event__block textarea {
+  width: 100%;
+  margin: 5px 0;
+}
+.events-block  {
+  padding: 0 10px;
+}
+.events-block li {
+  border-bottom: 1px solid #F6F2F2;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.events-block li p {
+  margin: 5px 0;
+}
+.filled {
+  background-color: rgba(0, 162, 255, 0.459);
+}
+
+#searchResult {
+  text-align: left;
+  max-width: 22em;
+  min-height: auto;
+}
+#searchResult li {
+  padding: 10px;
+  border-bottom: 1px solid #F6F2F2;
+}
